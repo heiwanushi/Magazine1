@@ -1,0 +1,11 @@
+C:\Projects\WEBAPP\Magazine.Core\bin\Debug\net8.0\Magazine.Core.deps.json
+C:\Projects\WEBAPP\Magazine.Core\bin\Debug\net8.0\Magazine.Core.dll
+C:\Projects\WEBAPP\Magazine.Core\bin\Debug\net8.0\Magazine.Core.pdb
+C:\Projects\WEBAPP\Magazine.Core\obj\Debug\net8.0\Magazine.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\WEBAPP\Magazine.Core\obj\Debug\net8.0\Magazine.Core.AssemblyInfoInputs.cache
+C:\Projects\WEBAPP\Magazine.Core\obj\Debug\net8.0\Magazine.Core.AssemblyInfo.cs
+C:\Projects\WEBAPP\Magazine.Core\obj\Debug\net8.0\Magazine.Core.csproj.CoreCompileInputs.cache
+C:\Projects\WEBAPP\Magazine.Core\obj\Debug\net8.0\Magazine.Core.dll
+C:\Projects\WEBAPP\Magazine.Core\obj\Debug\net8.0\refint\Magazine.Core.dll
+C:\Projects\WEBAPP\Magazine.Core\obj\Debug\net8.0\Magazine.Core.pdb
+C:\Projects\WEBAPP\Magazine.Core\obj\Debug\net8.0\ref\Magazine.Core.dll
