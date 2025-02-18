@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Magazine.Core.Models;
 using Magazine.Core.Services;
-using System;
 
 namespace Magazine.WebApi.Controllers
 {
@@ -17,17 +16,13 @@ namespace Magazine.WebApi.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)] // Указывает на успешное создание
-        [ProducesResponseType(StatusCodes.Status400BadRequest)] // Для ошибки 400
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Для ошибки 500
-        [HttpPost]
         public IActionResult Add([FromBody] Product product)
         {
             try
             {
-                // Теперь product.Image - это строка
                 var createdProduct = _productService.Add(product);
-                return CreatedAtAction(nameof(GetById), new { id = createdProduct.Id }, createdProduct);
+                return CreatedAtAction(nameof(GetById), 
+                    new { id = createdProduct.Id }, createdProduct);
             }
             catch (Exception ex)
             {
@@ -35,40 +30,15 @@ namespace Magazine.WebApi.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult Remove(Guid id)
+        [HttpGet("{id}")]
+        public IActionResult GetById(Guid id)
         {
             try
             {
-                var removedProduct = _productService.Remove(id);
-                if (removedProduct == null)
-                {
+                var product = _productService.Search(id);
+                if (product == null)
                     return NotFound();
-                }
-                return Ok(removedProduct);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
-        }
-
-        [HttpPut("{id}")]
-        public IActionResult Edit(Guid id, [FromBody] Product product)
-        {
-            if (product.Id != id)
-            {
-                return BadRequest("Product ID in URL does not match the ID in the product object.");
-            }
-
-            try
-            {
-                var updatedProduct = _productService.Edit(product);
-                if (updatedProduct == null)
-                {
-                    return NotFound();
-                }
-                return Ok(updatedProduct);
+                return Ok(product);
             }
             catch (Exception ex)
             {
@@ -81,8 +51,7 @@ namespace Magazine.WebApi.Controllers
         {
             try
             {
-                var products = _productService.GetAll(); // Предполагается, что метод GetAll реализован в вашем IProductService
-                return Ok(products);
+                return Ok(_productService.GetAll());
             }
             catch (Exception ex)
             {
@@ -90,17 +59,35 @@ namespace Magazine.WebApi.Controllers
             }
         }
 
-
-        [HttpGet("{id}")]
-        public IActionResult GetById(Guid id)
+        [HttpPut("{id}")]
+        public IActionResult Edit(Guid id, [FromBody] Product product)
         {
             try
             {
-                var product = _productService.Search(id);
-                if (product == null)
-                {
+                if (id != product.Id)
+                    return BadRequest();
+
+                var updatedProduct = _productService.Edit(product);
+                if (updatedProduct == null)
                     return NotFound();
-                }
+
+                return Ok(updatedProduct);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Remove(Guid id)
+        {
+            try
+            {
+                var product = _productService.Remove(id);
+                if (product == null)
+                    return NotFound();
+
                 return Ok(product);
             }
             catch (Exception ex)

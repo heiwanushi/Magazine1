@@ -3,19 +3,15 @@ using Magazine.WebApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Добавление сервисов
 builder.Services.AddControllers();
-
-// Регистрация IProductService с реализацией ProductService
-builder.Services.AddScoped<IProductService, ProductService>();  // Добавьте эту строку
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddSingleton<IProductService, ProductService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Настройка middleware
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -23,9 +19,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

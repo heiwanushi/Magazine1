@@ -159,3 +159,4 @@ C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\refint\Magazine.WebApi.dll
 C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\Magazine.WebApi.pdb
 C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\Magazine.WebApi.genruntimeconfig.cache
 C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\ref\Magazine.WebApi.dll
+C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\Magazine.WebApi.sourcelink.json
