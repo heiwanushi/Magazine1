@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text.Json;
 using System.Threading;
 using Microsoft.Extensions.Configuration;
@@ -164,6 +166,7 @@ namespace Magazine.WebApi.Services
 
         private void WriteToFile()
         {
+            _mutex.WaitOne();
             try
             {
                 var options = new JsonSerializerOptions 
@@ -184,6 +187,10 @@ namespace Magazine.WebApi.Services
             catch (Exception ex)
             {
                 throw new InvalidOperationException("Error writing to file", ex);
+            }
+            finally
+            {
+                _mutex.ReleaseMutex();
             }
         }
     }

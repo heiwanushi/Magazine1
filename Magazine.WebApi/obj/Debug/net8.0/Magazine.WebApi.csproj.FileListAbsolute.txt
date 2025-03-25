@@ -145,6 +145,7 @@ C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\Magazine.WebApi.AssemblyInfo
 C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\Magazine.WebApi.csproj.CoreCompileInputs.cache
 C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\Magazine.WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\Magazine.WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\Magazine.WebApi.sourcelink.json
 C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\staticwebassets.build.json
 C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\staticwebassets.development.json
 C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\staticwebassets\msbuild.Magazine.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
@@ -159,4 +160,3 @@ C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\refint\Magazine.WebApi.dll
 C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\Magazine.WebApi.pdb
 C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\Magazine.WebApi.genruntimeconfig.cache
 C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\ref\Magazine.WebApi.dll
-C:\Projects\WEBAPP\Magazine.WebApi\obj\Debug\net8.0\Magazine.WebApi.sourcelink.json
