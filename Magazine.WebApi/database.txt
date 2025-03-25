@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "Name": "string3233144",
+    "Definition": "string",
+    "Price": 0,
+    "Image": "string"
+  },
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa4",
+    "Name": "1string",
+    "Definition": "1string",
+    "Price": 0,
+    "Image": "1string"
+  }
+]
